@@ -4,7 +4,7 @@ converting between Braille and other representations.
 
 ## Classes
 ### BrailleASCIITables
-Take two command-line paramters, the first of which represents the
+Take two command-line parameters, the first of which represents the
 target character set and the second of which represents the source
 characters, and translates the text.
 
@@ -14,13 +14,11 @@ to ASCII, and from braille to Unicode) as BitTrees. Each is stored in
 a text file in the format `SOURCEtoTARGET.txt`.
 
 ### BitTree
-Stores the mappings from bits to values. 
+Stores the mappings from bits to values. The nodes in the BitTree are 
+stored as one of two types:
+- BitTreeNode: Nodes in the BitTree.
+- BitTreeLeaf: Subclass of BitTreeNode that stores data.
 
-#### BitTreeNode
-Nodes in the BitTree.
-
-#### BitTreeLeaf
-Subclass of BitTreeNode that stores data.
 
 ## Usage
     BrailleASCII <TARGET> <SOURCE>
